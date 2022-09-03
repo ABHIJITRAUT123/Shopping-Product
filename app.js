@@ -289,12 +289,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ui.getBagButtons();
       ui.cartFuntionality();
     })
-    // then will be executed but just you wont recieve anything inside then
-    // .then(() => {
-    //   ui.initialSetup();
-    //   ui.getBagButtons();
-    //   ui.cartFuntionality();
-    // });
 });
 
 cartClose.addEventListener("click", () => {
@@ -320,20 +314,6 @@ closeBuyModal.onclick = () => {
   buyModal.style.display = "none";
 }
 
-// clearCart.addEventListener("click", () => {
-//   const ui = new UserInterface();
-//   cart = [];
-//   Storage.setCartItems(cart);
-//   //setting the cart values
-//   ui.setCartValues(cart);
-//   //show cart values
-//   ui.addCartItems(cart);
-//   //removing show class
-//   ui.closeCart();
-//   //resetting buttons
-//   ui.resetButtons();
-// });
-
 clearCart.onclick = () => {
   const ui = new UserInterface();
   ui.clearCart();
@@ -355,36 +335,3 @@ window.onclick = function(event) {
     loginModal.style.display = "none";
   }
 }
-
-
-
-// console.log(document.URL);
-
-// let arr = [1,2,3]
-// let val = 0;
-// arr.forEach((el) => {
-//   val += el
-// })
-
-
-// export 
-// import
-
-// export const getProducts = async() => {
-//   try {
-//     const result = await fetch("data/products.json"); //returns response object
-//     let products = await result.json(); // to get the data from response object
-//     let data = products.items;
-//     data = data.map((item) => {
-//       const { title, price, type, rating } = item.fields;
-//       const id = item.sys.id;
-//       const url = item.fields.image.fields.file.url;
-//       return { title, price, type, rating, id, url };
-//     });
-//     return data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// import {getProducts} from './'
